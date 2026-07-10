@@ -1,110 +1,128 @@
-function welcomeCustomer() {
-    alert("Welcome to Luxmzzy Luxury Hair Cut!");
-}
+// ============================
+// LUXMZZY LUXURY HAIR CUT
+// PROFESSIONAL SCRIPT.JS
+// ============================
 
-welcomeCustomer();
-
-function openingHours() {
-    alert("We are open from 9:00 AM to 10:00 PM");
-}
-
-openingHours();
-
-const topBtn = document.getElementById("topBtn");
-
-window.onscroll = function () {
-
-    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
-
-        topBtn.style.display = "block";
-
-    }else{
-
-        topBtn.style.display = "none";
-
-    }
-
-}
-
-topBtn.onclick = function(){
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-}
-
-const themeBtn = document.getElementById("themeBtn");
-
-themeBtn.onclick = function(){
-
-    document.body.classList.toggle("dark");
-
-}
+// LIVE clock
 
 function updateClock() {
 
-    const now = new Date();
+    const clock = document.getElementById("clock");
 
-    document.getElementById("clock").innerHTML =
-        "🕒 " + now.toLocaleTimeString();
+    if (!clock) return;
 
-}
+    let now = new Date();
 
-updateClock();          // Show the time immediately
-setInterval(updateClock, 1000);
+    let options = {
+        weekday: "long",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
 
-const bookingForm = document.getElementById("bookingForm");
-
-if (bookingForm) {
-
-    bookingForm.addEventListener("submit", function(event){
-
-        event.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const service = document.getElementById("service").value;
-
-        if(name === "" || email === ""){
-
-            alert("Please fill in all required fields.");
-
-            return;
-
-        }
-
-        alert("✅ Thank you, " + name + "! Your appointment request has been received.");
-
-        bookingForm.reset();
-
-    });
+    clock.innerHTML = now.toLocaleTimeString("en-US", options);
 
 }
 
-const hiddenElements = document.querySelectorAll(".hidden");
 
-const observer = new IntersectionObserver((entries) => {
+// SCROLL EFFECT
 
-    entries.forEach((entry) => {
+window.addEventListener("scroll",function(){
 
-        if(entry.isIntersecting){
+const navbar=document.querySelector(".navbar");
 
-            entry.target.classList.add("show");
+if(window.scrollY>50){
 
-        }
+navbar.style.background="#000";
 
-    });
+}else{
+
+navbar.style.background="rgba(0,0,0,.75)";
+
+}
 
 });
 
-hiddenElements.forEach((element) => {
+// BACK TO TOP
 
-    observer.observe(element);
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 300) {
+
+            topBtn.style.display = "block";
+
+        } else {
+
+            topBtn.style.display = "none";
+
+        }
+
+    });
+
+    topBtn.onclick = function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    };
+
+}
+
+// ==========================
+// ANIMATED COUNTER
+// ==========================
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+    const updateCounter = () => {
+
+        const target = +counter.getAttribute("data-target");
+
+        const current = +counter.innerText;
+
+        const increment = target / 100;
+
+        if(current < target){
+
+            counter.innerText = Math.ceil(current + increment);
+
+            setTimeout(updateCounter,20);
+
+        }else{
+
+            counter.innerText = target;
+
+        }
+
+    };
+
+    updateCounter();
+
+});
+
+/* MOBILE MENU */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    }
 
 });
 

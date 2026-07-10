@@ -1,102 +1,303 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Luxmzzy Luxury Hair Cut</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<nav>
+    <!-- Navigation -->
 
-<h2>Luxmzzy Luxury Hair Cut</h2>
+    <header>
 
-<ul>
+       <nav class="navbar">
 
-<li><a href="index.html">Home</a></li>
+          <div class="logo">
+              <img src="images/logo.png" alt="Luxmzzy Luxury Hair Cut">
+          </div>
 
-<li><a href="service.html">Service</a></li>
+          <div class="menu-toggle" id="menu-toggle">
+              ☰
+          </div>
 
-<li><a href="gallary.html">Gallary</a></li>
+          <ul class="nav-links" id="nav-links">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="services.html">Services</a></li>
+               <li><a href="gallery.html">Gallery</a></li>
+               <li><a href="booking.html">Booking</a></li>
+               <li><a href="contact.html">Contact</a></li>
+           </ul>
 
-<li><a href="booking.html">Booking</a></li>
+       </nav>
 
-<li><a href="contact.html">Contact</a></li>
+    </header>
 
-</ul>
+    <!-- Hero Section -->
 
-<button id="themeBtn">🌙</button>
+    <section class="hero">
 
-</nav>
+        <div class="overlay">
 
-<section class="hero">
+            <div class="hero-content">
 
-<h1>welcome to luxmzzy luxury hair cut</h1>
+    <p class="welcome">WELCOME TO</p>
 
-<p>luxury haircut for elegant gentlemen</p>
+    <h1>
+        LUXMZZY
+        <br>
+        LUXURY HAIR CUT
+    </h1>
 
-<p>Premium Haircuts • Beard Styling • Professional Care</p>
+    <p class="hero-text">
 
-<p id="clock"></p>
+        Precision Haircuts.
+        Premium Grooming.
+        Luxury Experience.
 
-<button>Book Your Luxury Cut</button>
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="booking.html" class="btn">
+
+            Book Appointment
+
+        </a>
+
+        <a href="gallery.html" class="btn2">
+
+            View Gallery
+
+        </a>
+
+        </div>
+
+              <div id="clock"></div>
+
+         </div>
+
+        </div>
+
+    </section>
+
+<section class="stats">
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="200">0</h2>
+        <p>Happy Clients</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="3">0</h2>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Hair Styles</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="100">0</h2>
+        <p>Customer Satisfaction (100%)</p>
+    </div>
 
 </section>
 
-<script src="script.js"></script>
+    <section class="services">
 
-<button id="topBtn">↑</button>
+    <h2>Our Premium Services</h2>
+
+    <div class="service-container">
+
+        <div class="service-card">
+            <h3>💈 Premium Haircut</h3>
+            <p>Luxury modern styles -  #3,000</p>
+        </div>
+
+        <div class="service-card">
+            <h3>🧔 Beard Grooming</h3>
+            <p>Professional shaping  -  #1,500</p>
+        </div>
+
+        <div class="service-card">
+            <h3>👦 Kids Haircut</h3>
+            <p>modern hair style  -  #2,000</p>
+        </div>
+
+        <div class="service-card">
+            <h3>⭐ VIP Luxury Package</h3>
+            <p>Haircut
+                beard
+                Hot Towel  -  #5,000</p>
+        </div>
+
+    </div>
+
+    </section>
+
+   <section class="gallery">
+
+    <h2>Our Gallery</h2>
+
+    <div class="gallery-container">
+
+        <div class="gallery-card">
+            <img src="images/gallery1.jpg" alt="Haircut 1">
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/gallery2.jpg" alt="Haircut 2">
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/gallery3.jpg" alt="Haircut 3">
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/gallery4.jpg" alt="Haircut 4">
+        </div>
+
+    </div>
+
+    </section>
+
+<section class="testimonials">
+
+    <h2>What Our Clients Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+
+            <p>
+                "The best barber experience I've ever had.
+                Professional service and a clean environment."
+            </p>
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <h4>— Daniel A.</h4>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <p>
+                "Amazing haircut. The attention to detail is
+                outstanding. Highly recommended!"
+            </p>
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <h4>— Michael O.</h4>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <p>
+                "Luxmzzy Luxury Hair Cut is my number one choice.
+                Excellent customer service!"
+            </p>
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <h4>— Samuel K.</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="why-us">
+
+    <h2>Why Choose Luxmzzy?</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <h3>💈 Professional Barbers</h3>
+            <p>Experienced barbers dedicated to giving you the perfect haircut every time.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>✨ Luxury Experience</h3>
+            <p>Relax in a clean, comfortable and premium environment.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>⭐ Premium Products</h3>
+            <p>We use high-quality grooming products for healthy hair and beard care.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>😊 Customer Satisfaction</h3>
+            <p>Your confidence is our priority. We aim to exceed your expectations.</p>
+        </div>
+
+    </div>
+
+</section>
 
 <footer>
 
     <div class="footer-container">
 
-        <div class="footer-box">
+        <div class="footer-logo">
 
-            <h3>Luxmzzy Luxury Hair Cut</h3>
+            <h2>Luxmzzy Luxury Hair Cut</h2>
 
-            <p>
-                Premium haircuts with luxury service.
-            </p>
+            <p>Where Style Meets Luxury.</p>
 
         </div>
 
-        <div class="footer-box">
+        <div class="footer-links">
 
             <h3>Quick Links</h3>
 
-            <a href="index.html">Home</a><br>
-            <a href="booking.html">Booking</a><br>
-            <a href="gallary.html">Gallary</a><br>
-            <a href="contact.html">Contact</a>
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="services.html">Services</a></li>
+
+                <li><a href="gallery.html">Gallery</a></li>
+
+                <li><a href="booking.html">Booking</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
 
         </div>
 
-        <div class="footer-box">
+        <div class="footer-contact">
 
             <h3>Contact</h3>
 
-            <p>📍 5, Ijaiye Street, Itire, Mushin, Lagos</p>
+            <p>📍 5 Ijaiye Street, Itire, Mushin, Lagos</p>
 
             <p>📞 +234 906 858 4662</p>
 
-            <p>📧 aniagolumitcheal08@gmail.com</p>
+            <p>🕒 Mon - Sat | 9:00 AM - 9:30 PM</p>
 
-            <h3>Opening Hours</h3>
-
-            <p>Monday - Saturday</p>
-
-            <p>9:00 AM - 8:00 PM</p>
-
-            <p>Sunday </p>
-
-            <p>4:00 pm - 10:00 pm</p>
-
-            <p>
-         <a href="https://wa.me/2349068584662" target="_blank">
-          💬 Chat with us on WhatsApp
-         </a>
-            </p>
         </div>
 
     </div>
@@ -104,12 +305,29 @@
     <hr>
 
     <p class="copyright">
-        © 2026 Luxmzzy Luxury Hair Cut. All Rights Reserved.
+
+        © 2026 Luxmzzy Luxury Hair Cut | Designed by MitchTech
+
     </p>
 
 </footer>
 
-</form>
+<a href="https://wa.me/2349068584662"
+class="whatsapp"
+target="_blank">
 
-</body> 
+💬
+
+</a>
+
+<button id="topBtn">
+
+⬆
+
+</button>
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
